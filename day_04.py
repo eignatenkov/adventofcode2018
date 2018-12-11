@@ -34,7 +34,6 @@ def read_input(filename):
     return result_df
 
 
-
 if __name__ == "__main__":
     byminute_df = read_input("/home/egor/private/adventofcode2018/data/day04_input.txt")
     best_guard = (byminute_df.groupby('guard_id').sum().sum(axis=1).sort_values(ascending=False)).index[0]
